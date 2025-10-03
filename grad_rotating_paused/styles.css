@@ -25,6 +25,18 @@ main {
   }
 }
 
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 180deg;
+    inherits: true;
+}
+
+@keyframes rotate {
+	to {
+		--angle: 1turn;
+	}
+}
+
 button {
   text-decoration: none;
   font: inherit;
@@ -35,7 +47,7 @@ button {
   border: 5px solid transparent;
   background: 
     linear-gradient(white 0 0) padding-box,
-    conic-gradient(blue, red, blue) border-box;
+    conic-gradient(from var(--angle), blue, red, blue) border-box;
 }
 
 button:hover,
