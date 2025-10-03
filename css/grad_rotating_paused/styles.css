@@ -21,8 +21,7 @@ main {
 
   border: 8px solid transparent;
   background: linear-gradient(white 0 0) padding-box,
-    conic-gradient(from var(--angle), blue, purple, red, purple, blue)
-      border-box;
+    conic-gradient(from var(--angle), blue, purple, red, purple, blue) border-box;
 
   animation: rotate 3s linear infinite;
   animation-play-state: paused;
