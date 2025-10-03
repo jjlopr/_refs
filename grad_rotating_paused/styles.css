@@ -27,7 +27,7 @@ main {
 
 @property --angle {
     syntax: "<angle>";
-    initial-value: 180deg;
+    initial-value: 0deg;
     inherits: true;
 }
 
@@ -48,11 +48,13 @@ button {
   background: 
     linear-gradient(white 0 0) padding-box,
     conic-gradient(from var(--angle), blue, red, blue) border-box;
+  animation: rotate 3s linear infinite;
+  animation-play-state: paused;
 }
 
 button:hover,
 button:focus-visible {
-    animation: rotate 3s linear infinite;
+    animation-play-state: running;
 }
 
 @layer general-styling {
